@@ -1,0 +1,11 @@
+scripts:
+  server:
+    - cd src && python manage.py runserver 8001
+  makemigrations:
+    - cd src && python manage.py migrations
+  migrate:
+    - cd src && python manage.py migrate
+  curl_auth: |
+    c 
+  curl_protect: |
+      curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NzgwNjE4LCJpYXQiOjE3MjU3Nzk0MTgsImp0aSI6IjQ4N2RhNjc0MzJjNzQ1MDliODkwNjBmMWVlMjM4NzA0IiwidXNlcl9pZCI6MX0.y9R1lYAEp7LuY9zxyFyTCSeTIobGggUY8xTkuTDnR4w" http://127.0.0.1:8001/api/me
